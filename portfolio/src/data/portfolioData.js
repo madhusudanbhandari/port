@@ -2,12 +2,13 @@ const portfolioData = {
 
   name: "Madhusudan Bhandari",
   title: "Software Engineering Student",
+  avatar:"/profile.jpg",
   bio: "Passionate software engineering student at Nepal College of Information Technology, Pokhara University with a love for building scalable systems, elegant UIs, and solving real-world problems through clean, efficient code. Currently seeking internship & full-time opportunities.",
   email: "madhusudanb636@gmail.com",
   github: "https://github.com/madhusudanbhandari",
   linkedin: "https://www.linkedin.com/in/madhusudan-bhandari-70a392259/",
   location: "Bafal, Kathmandu",
-  resumeUrl: "/src/assets/resume.png",
+  resumeUrl: "/Resume.pdf",
   avatar: null,
   isOpenToWork: true,
 
@@ -29,6 +30,20 @@ const portfolioData = {
   ],
 
   projects: [
+    {
+      title:"GharKoKaam",
+      description:"A full-stack home services booking platform for Kathmandu, Nepal — connecting customers with verified local workers for plumbing, electrical, cleaning, and more.",
+      tech:['Django',"React",'MySQL'],
+      github:"https://github.com/madhusudanbhandari/House-Worker-Booking",
+      live:"https://house-worker-booking-1.onrender.com/",
+      highlight:true,
+    },
+    {
+      title:"Ecommerce-app",
+      description:"A full-stack E-commerce web application using Django, Django REST Framework, React, and PostgreSQL. The project includes user authentication, product management, cart functionality, and order placement features. I worked on REST API development, database integration, JSON handling, frontend-backend communication, and responsive UI development.",
+      tech:['Django','React','MySQL'],
+      github:"https://github.com/madhusudanbhandari/Ecommerce-app",
+    },
     {
       title: "Venue-Booking App",
       description: "Venue bookinng application built with Flutter, allowing users to search for venues and make bookings, allowing the admin or the venue owner to upload venues and track bookings using Firebase as the backend.",
@@ -65,8 +80,8 @@ const portfolioData = {
 
   skills: {
     "Languages":          ["Python", "JavaScript",  "C++", "SQL", "Html/CSS", "Dart"],
-    "Frontend & Mobile":  ["Flutter","React",  "HTML/CSS"],
-    "Backend & APIs":     ["Node.js", "FastAPI", "REST", "Firebase"],
+    "Frontend & Mobile":  ["Flutter","React"],
+    "Backend & APIs":     ["Django", "FastAPI", "REST", "Firebase"],
     "Data & ML":          ["PyTorch", "TensorFlow", "Pandas", "NumPy", "Scikit-learn", "Jupyter"],
     "Cloud & DevOps":     ["AWS"],
     "Databases":          ["PostgreSQL", "MongoDB"],

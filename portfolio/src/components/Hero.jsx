@@ -44,7 +44,8 @@ export default function Hero({ setHovering }) {
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Button variant="primary" onClick={() => scrollTo("Contact")} onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>✉ Get in Touch</Button>
             <Button variant="outline" onClick={() => scrollTo("Projects")} onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>⚡ View Projects</Button>
-            {d.resumeUrl && <Button href={d.resumeUrl} target="_blank" variant="outline" style={{ color: "var(--accent2)", borderColor: "var(--accent2)" }} onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>↓ Resume</Button>}
+         
+            <Button href={d.resumeUrl} target="_blank" variant="outline" style={{ color: "var(--accent2)", borderColor: "var(--accent2)" }} onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>↓ Resume</Button>
           </div>
           <div style={{ display: "flex", gap: 10, marginTop: 20, flexWrap: "wrap" }}>
             <LinkButton href={d.github}>⌥ GitHub</LinkButton>
