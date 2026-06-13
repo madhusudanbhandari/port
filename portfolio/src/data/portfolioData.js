@@ -2,7 +2,7 @@ const portfolioData = {
 
   name: "Madhusudan Bhandari",
   title: "Software Engineering Student",
-  avatar:"/profile.jpg",
+  avatar: "/profile.jpg",
   bio: "Passionate software engineering student at Nepal College of Information Technology, Pokhara University with a love for building scalable systems, elegant UIs, and solving real-world problems through clean, efficient code. Currently seeking internship & full-time opportunities.",
   email: "madhusudanb636@gmail.com",
   github: "https://github.com/madhusudanbhandari",
@@ -79,10 +79,10 @@ const portfolioData = {
   ],
 
   skills: {
-    "Languages":          ["Python", "JavaScript",  "C++", "SQL", "Html/CSS", "Dart"],
+    "Languages":          ["Python", "JavaScript",   "SQL", "Html/CSS", "Dart"],
     "Frontend & Mobile":  ["Flutter","React"],
     "Backend & APIs":     ["Django", "FastAPI", "REST", "Firebase"],
-    "Data & ML":          ["PyTorch", "TensorFlow", "Pandas", "NumPy", "Scikit-learn", "Jupyter"],
+    "Data & ML":          [ "Pandas", "NumPy", "Scikit-learn", "Jupyter"],
     "Cloud & DevOps":     ["AWS"],
     "Databases":          ["PostgreSQL", "MongoDB"],
   },
