@@ -16,7 +16,7 @@ const portfolioData = {
     {
       institution: "Nepal College of Information Technology, Pokhara University",
       degree: "Bachelor of Engineering in Software Engineering",
-      period: "2022 – Current",
+      period: "2022 – 2026",
     },
     {
       institution: "Radiant College, Mahendranagar",
@@ -31,6 +31,24 @@ const portfolioData = {
 
   projects: [
     {
+      title:"Employee Management System",
+      description:"Developed an enterprise EMS implementing JWT-based authentication and role-based authorization for employee and department management, leave management with HR approval workflows, payroll management, and employee-specific data access. Built RESTful APIs using a Repository–Service–Controller architecture, with EF Core and LINQ for database operations, pagination, searching, sorting, and optimizedquerying. Integrated SignalR for real-time employee communication and chat, including conversation and participant management. Used DTOs, AutoMapper, FluentValidation, BCrypt password hashing, Redis for caching and PostgreSQL for a scalable and maintainable backend.",
+      github:"https://github.com/madhusudanbhandari/House-Worker-Booking",
+      tech:['ASP.NET',"React",'PostgreSQL',"Redis","Docker"],
+      live:"https://house-worker-booking-1.onrender.com/",
+      highlight:true,
+    },
+
+     {
+      title:"Food-Delivery App",
+      description:"I built this project to practice and demonstrate real-world backend concepts such as REST APIs, JWT authentication, role-based authorization, Entity Framework Core, repository/service architecture, Redis caching, background services, SignalR, Docker, health checks, and production-oriented application design.",
+      tech:['ASP.NET',"React",'PostgreSQL',"Redis","Docker"],
+      github:"https://github.com/madhusudanbhandari/FDP",
+      //live:"https://house-worker-booking-1.onrender.com/",
+      highlight:true,
+    },
+
+    {
       title:"GharKoKaam",
       description:"A full-stack home services booking platform for Kathmandu, Nepal — connecting customers with verified local workers for plumbing, electrical, cleaning, and more.",
       tech:['Django',"React",'MySQL'],
@@ -38,12 +56,7 @@ const portfolioData = {
       live:"https://house-worker-booking-1.onrender.com/",
       highlight:true,
     },
-    {
-      title:"Ecommerce-app",
-      description:"A full-stack E-commerce web application using Django, Django REST Framework, React, and PostgreSQL. The project includes user authentication, product management, cart functionality, and order placement features. I worked on REST API development, database integration, JSON handling, frontend-backend communication, and responsive UI development.",
-      tech:['Django','React','MySQL'],
-      github:"https://github.com/madhusudanbhandari/Ecommerce-app",
-    },
+
     {
       title: "Venue-Booking App",
       description: "Venue bookinng application built with Flutter, allowing users to search for venues and make bookings, allowing the admin or the venue owner to upload venues and track bookings using Firebase as the backend.",
@@ -52,14 +65,7 @@ const portfolioData = {
       //live: "https://neuralnote.app",
       highlight: true,
     },
-    {
-      title: "Transport-app",
-      description: "A mobile application for tracking and managing public transportation schedules and routes.",
-      tech: ["Flutter", "Node.js", "MongoDB", ],
-      github: "https://github.com/madhusudanbhandari/ktm-pbs",
-      //live: "https://transport-app.vercel.app",
-      highlight: false,
-    },
+
     {
       title: "Sacred-Kathmandu",
       description: "A Website showcasing the sacred sites of Kathmandu, built with React.js providing information about the history and significance of each site.",
@@ -79,9 +85,9 @@ const portfolioData = {
   ],
 
   skills: {
-    "Languages":          ["Python", "JavaScript",   "SQL", "Html/CSS", "Dart"],
+    "Languages":          ["C#","Python", "JavaScript",   "SQL", "Html/CSS", "Dart"],
     "Frontend & Mobile":  ["Flutter","React"],
-    "Backend & APIs":     ["Django", "FastAPI", "REST", "Firebase"],
+    "Backend & APIs":     ["ASP.NET","Django", "FastAPI", "REST", "Firebase"],
     "Data & ML":          [ "Pandas", "NumPy", "Scikit-learn", "Jupyter"],
     "Cloud & DevOps":     ["AWS"],
     "Databases":          ["PostgreSQL", "MongoDB"],
