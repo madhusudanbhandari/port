@@ -1,27 +1,85 @@
+
 import portfolioData from "../data/portfolioData";
-import { FadeIn, SectionHeader, Card, Badge, LinkButton, Accent } from "./UI";
+import {
+  FadeIn,
+  SectionHeader,
+  Card,
+  Badge,
+  LinkButton,
+  Accent,
+} from "./UI";
 
 export default function Projects({ setHovering }) {
   const { projects } = portfolioData;
+
   return (
-    <section id="projects" style={{ paddingTop: 32, marginBottom: 100 }}>
-      <FadeIn><SectionHeader label="Projects" title={<>What I've <Accent>Built</Accent></>} /></FadeIn>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20 }}>
-        {projects.map((p, i) => (
-          <FadeIn key={i} delay={i * 0.08}>
-            <Card highlight={p.highlight} style={{ height: "100%", display: "flex", flexDirection: "column" }} onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
-              {p.highlight && (
-                <div style={{ position: "absolute", top: 16, right: 16, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.15em", textTransform: "uppercase", background: "linear-gradient(90deg, var(--accent), var(--accent2))", color: "#fff", padding: "3px 10px", borderRadius: 20 }}>⭐ Featured</div>
+    <section id="projects" className="section projects-section">
+      <FadeIn>
+        <SectionHeader
+          label="Projects"
+          title={
+            <>
+              What I've <Accent>Built</Accent>
+            </>
+          }
+        />
+      </FadeIn>
+
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <FadeIn
+            key={project.title ?? index}
+            delay={Math.min(index * 0.06, 0.24)}
+            className="project-item"
+          >
+            <Card
+              highlight={project.highlight}
+              className="project-card"
+              onMouseEnter={() => setHovering?.(true)}
+              onMouseLeave={() => setHovering?.(false)}
+            >
+              <div className="project-content">
+                <div className="project-heading">
+                  <h3>{project.title}</h3>
+
+                  {project.highlight && (
+                    <span className="project-featured">
+                      Featured
+                    </span>
+                  )}
+                </div>
+
+                <p className="project-description">
+                  {project.description}
+                </p>
+
+                <div
+                  className="project-tech"
+                  aria-label="Technologies used"
+                >
+                  {project.tech.map((technology) => (
+                    <Badge key={technology}>
+                      {technology}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              {(project.github || project.live) && (
+                <div className="project-actions">
+                  {project.github && (
+                    <LinkButton href={project.github}>
+                      View Code
+                    </LinkButton>
+                  )}
+
+                  {project.live && (
+                    <LinkButton href={project.live}>
+                      Live Demo
+                    </LinkButton>
+                  )}
+                </div>
               )}
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, marginBottom: 10 }}>{p.title}</h3>
-              <p style={{ color: "var(--muted)", fontSize: "0.88rem", lineHeight: 1.65, flex: 1, marginBottom: 16 }}>{p.description}</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
-                {p.tech.map((t) => <Badge key={t} style={{ fontSize: "0.72rem" }}>{t}</Badge>)}
-              </div>
-              <div style={{ display: "flex", gap: 8 }}>
-                {p.github && <LinkButton href={p.github}>⌥ Code</LinkButton>}
-                {p.live   && <LinkButton href={p.live}>↗ Live</LinkButton>}
-              </div>
             </Card>
           </FadeIn>
         ))}
